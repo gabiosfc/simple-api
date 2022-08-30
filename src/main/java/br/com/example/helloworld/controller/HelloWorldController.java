@@ -1,4 +1,7 @@
 package br.com.example.helloworld.controller;
+import br.com.example.helloworld.domain.Aluno;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +13,7 @@ public class HelloWorldController {
 
     @GetMapping(value = "/hello")
     public String hello(){
-        return "teste";
+        return "simple-api";
     }
 
     @GetMapping(value = "/helloWorld")
@@ -21,7 +24,22 @@ public class HelloWorldController {
     @GetMapping(value = "/exibeEntrada")
     public String exibeEntrada(@RequestParam String input){
         return input;
+    }
 
+    @PostMapping(value = "/insertNomeAluno")
+    public String insertNomeAluno(@RequestParam String nome){
+        return "O aluno "+ nome + " foi inserido no banco de daods da universidade.";
+    }
+
+    @PostMapping(value = "/insertAluno")
+    public String insertNomeAluno(@RequestBody Aluno novoAluno){
+        String str = "";
+        str += "\nNome: " + novoAluno.getNome();
+        str += "\nMatrícula: " + novoAluno.getMatricula();
+        str += "\nCurso: " + novoAluno.getCurso();
+        str += "\nIdade: " + novoAluno.getIdade();
+
+        return str;
     }
 
 }
