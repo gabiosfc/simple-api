@@ -1,4 +1,4 @@
-# hello-world
+# simple-api
 
 Passo a passo para subir a aplicação:
 
