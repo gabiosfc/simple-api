@@ -1,4 +1,4 @@
-package br.com.example.helloworld.domain;
+package br.com.example.simpleapi.model;
 
 public class Aluno {
     private String nome;

@@ -1,10 +1,9 @@
-package br.com.example.helloworld.controller;
-import br.com.example.helloworld.domain.Aluno;
+package br.com.example.simpleapi.controller;
+import br.com.example.simpleapi.model.Aluno;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
